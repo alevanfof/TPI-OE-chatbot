@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env
+.env.*
+
+# Archivos de base de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Cobertura y testing
+.coverage
+.pytest_cache/
+
+# Build
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
