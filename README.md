@@ -59,6 +59,128 @@ Relación entre responsabilidades declaradas y componentes desarrollados.
 
 Cada integrante deberá poder explicar durante la defensa oral la parte del sistema bajo su responsabilidad y su relación con el modelo BPMN propuesto.
 
+🌿 Estrategia de Ramas (Branches) y Uso de Personal Access Token (PAT)
+Objetivo
+
+Para facilitar el trabajo colaborativo, mantener la trazabilidad individual y evitar conflictos de código, cada integrante desarrollará sus modificaciones en una rama independiente antes de integrarlas a la rama principal del proyecto.
+
+Estructura de Ramas
+Rama Principal
+main
+
+Contiene únicamente versiones estables e integradas del proyecto.
+
+Alejandro Fernández (PROY-1)
+
+Responsable de:
+
+Máquina de estados conversacional.
+Flujo principal del chatbot.
+Integración BPMN ↔ Código.
+Caminos felices e infelices.
+Validación funcional del proceso completo.
+
+Rama de trabajo:
+
+desarrollo-main
+
+Creación de la rama:
+
+git checkout -b desarrollo-main
+Gabriel Di Lorenzo (PROY-2)
+
+Responsable de:
+
+Funciones auxiliares.
+Persistencia en archivos de texto.
+Validaciones.
+Manejo de excepciones.
+Menús y soporte de consola.
+
+Rama de trabajo:
+
+desarrollo-auxiliares
+
+Creación de la rama:
+
+git checkout -b desarrollo-auxiliares
+Flujo de Trabajo
+1. Clonar el repositorio
+git clone https://github.com/UTNTPOrganization/TPI-OE-chatbot.git
+cd TPI-OE-chatbot
+2. Actualizar la rama principal
+git checkout main
+git pull origin main
+3. Cambiar a la rama correspondiente
+
+Alejandro:
+
+git checkout desarrollo-main
+
+Gabriel:
+
+git checkout desarrollo-auxiliares
+4. Registrar cambios
+
+Alejandro:
+
+git add .
+git commit -m "[PROY-1] Implementa validación de empleado"
+
+Gabriel:
+
+git add .
+git commit -m "[PROY-2] Implementa persistencia de solicitudes"
+Uso de Personal Access Token (PAT)
+
+La autenticación con GitHub se realiza mediante un Personal Access Token (PAT) Classic generado individualmente por cada integrante.
+
+Push de la rama de Alejandro
+git push https://USUARIO_GITHUB:PAT_TOKEN@github.com/UTNTPOrganization/TPI-OE-chatbot.git desarrollo-main
+
+Ejemplo:
+
+git push https://AlejandroFernandez:PAT_TOKEN@github.com/UTNTPOrganization/TPI-OE-chatbot.git desarrollo-main
+Push de la rama de Gabriel
+git push https://USUARIO_GITHUB:PAT_TOKEN@github.com/UTNTPOrganization/TPI-OE-chatbot.git desarrollo-auxiliares
+
+Ejemplo:
+
+git push https://GabrielDiLorenzo:PAT_TOKEN@github.com/UTNTPOrganization/TPI-OE-chatbot.git desarrollo-auxiliares
+Integración Final
+
+Una vez finalizadas las tareas de cada integrante, las ramas se integrarán en la rama principal.
+
+git checkout main
+
+git merge desarrollo-main
+git merge desarrollo-auxiliares
+
+Publicación de la versión final:
+
+git push https://USUARIO_GITHUB:PAT_TOKEN@github.com/UTNTPOrganization/TPI-OE-chatbot.git main
+Buenas Prácticas
+Cada integrante utiliza su propio PAT.
+Nunca se publica el valor real del PAT.
+Nunca se comparte el PAT con terceros.
+Los commits deben incluir el prefijo correspondiente:
+[PROY-1] Alejandro Fernández.
+[PROY-2] Gabriel Di Lorenzo.
+La rama main debe mantenerse estable durante todo el desarrollo.
+Todo cambio debe quedar registrado mediante commits descriptivos.
+Evidencia para la Defensa Oral
+
+La trazabilidad del proyecto puede verificarse mediante:
+
+Historial completo de commits en GitHub.
+Uso de prefijos PROY-1 y PROY-2.
+Ramas separadas por responsabilidad funcional.
+Evolución incremental del código.
+Relación entre responsabilidades declaradas y componentes desarrollados.
+Uso de autenticación mediante Personal Access Token (PAT).
+
+Cada integrante deberá poder explicar durante la defensa oral la parte del sistema bajo su responsabilidad y su relación con el modelo BPMN implementado.
+
 ---
 
 ## 📂 Estructura de Archivos del Proyecto
